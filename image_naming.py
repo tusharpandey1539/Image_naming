@@ -8,7 +8,7 @@ from PIL import Image, ImageDraw, ImageFont
 #PIL = Python imaging library.
 
 def naming_image(city_name):
-    image = Image.open('images/{}.jpg'.format(city_name))
+    image = Image.open('{}.jpg'.format(city_name))
     # Creating a image object.
     
     font_type = ImageFont.load_default()
@@ -20,7 +20,7 @@ def naming_image(city_name):
     image_draw.text((15,15), city_name, fill = (237, 230, 211), font=font_type)
     # Rendering the image: Starting coordinates, Text, Text color, Font style.
     
-    image.save('images/{}.jpg'.format(city_name))
+    image.save('{}.jpg'.format(city_name))
         
     image.show()
     #function displays image
